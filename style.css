@@ -107,10 +107,15 @@ video {
 }
 
 
-/* .sound-pick button:nth-child(1){
+#headline{
+  width: 600px;
+  height: 30px;
+  padding: 5px;
+  font-size: 50px;
+  margin: auto;
+  color: white;
+  text-align: center;
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 
 }
-.sound-pick button:nth-child(2){
-
-} */
-
