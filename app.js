@@ -1,23 +1,19 @@
 const app = () => {
   const song = document.querySelector(".song");
   const play = document.querySelector(".play");
-  const outline = document.querySelector(".moving-outline circle");
+  
   const video = document.querySelector(".vid-container video");
   
-  const sounds = document.querySelectorAll(".sound-picker button")
+  const sounds = document.querySelectorAll(".sound-column button")
   
   const timeDisplay = document.querySelector(".time-display")
-  const timeSelect = document.querySelectorAll(".time-select button")
+  const timeSelect = document.querySelectorAll(".time-button")
   
-  const outlineLength = outline.getTotalLength();
-  const repeat = document.querySelector(".repeat");
   
   
   let duration = 600;
   
   
-  outline.style.strokeDasharray = outlineLength;
-  outline.style.strokeDashoffset = outlineLength;
   
   sounds.forEach(sound =>{
     sound.addEventListener("click", function(){
@@ -47,11 +43,15 @@ const app = () => {
       song.play();
       video.play();
       document.getElementById('headline').hidden = true;
+    
     play.src = "./svg/pause.svg";
+   
+    console.log(play.src);
     }else{
       song.pause();
       video.pause();
       play.src = "./svg/play.svg";
+    
     }
   }
   
@@ -61,8 +61,7 @@ const app = () => {
     let seconds = Math.floor(elapsed % 60) ;
     let minutes = Math.floor(elapsed / 60) ;
   
-  let progress = outlineLength - (currentTime / duration) * outlineLength;
-  outline.style.strokeDashoffset = progress;
+  
   timeDisplay.textContent = `${minutes}:${seconds}`;
   
   if(currentTime >= duration){
