@@ -1,59 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css"> 
-  <title>Relaxing sounds</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Relaxing sounds</title>
+  </head>
+  <body>
+    <div id="headline"></div>
+    <div class="container">
+      <div class="vid-container">
+        <video loop>
+          <source src="./video/rain.mp4" type="video/mp4" />
+          <source src="./video/beach.mp4" type="video/mp4" />
+          <source src="./video/fire.mp4" type="video/mp4" />
+        </video>
+      </div>
 
-  <div id="headline"> </div>
- 
-  <div class="container">
-    <div class="vid-container">
-      <video loop>
-        <source src="./video/rain.mp4" type="video/mp4"/>
-        <source src="./video/beach.mp4" type="video/mp4"/>
-        <source src="./video/fire.mp4" type="video/mp4"/>
-      </video>
+      <div class="time-column">
+        <button data-time="120" class="time-button">2 min</button>
+        <button data-time="300" class="time-button">5 min</button>
+        <button data-time="600" class="time-button">10 min</button>
+      </div>
+      <div class="play-column">
+        <div class="play-button">
+          <div class="outline">
+            <img class="play" src="./svg/play.svg" />
+          </div>
+        </div>
+        <h3 class="time-display">0:00</h3>
+      </div>
+      <div class="sound-column">
+        <audio class="song" loop>
+          <source src="./sounds/rain.mp3" />
+          <source src="./sounds/beach.mp3" />
+          <source src="./sounds/fire.mp3" />
+        </audio>
+        <button
+          class="sound-button"
+          data-sound="./sounds/rain.mp3"
+          data-video="./video/rain.mp4"
+        >
+          <img class="sound-img" src="./svg/rain.svg" alt="rain" />
+        </button>
+        <button
+          class="sound-button beach"
+          data-sound="./sounds/beach.mp3"
+          data-video="./video/beach.mp4"
+        >
+          <img class="sound-img" src="./svg/beach.svg" alt="beach" />
+        </button>
+        <button
+          class="sound-button"
+          data-sound="./sounds/fire.mp3"
+          data-video="./video/fire.mp4"
+        >
+          <img class="sound-img" src="./svg/fire.svg" alt="fire" />
+        </button>
+      </div>
     </div>
-
-<div class="time-column">
-  <button data-time="120" class ="time-button"> 2 min</button>
-  <button data-time="300" class ="time-button"> 5 min</button>
-  <button data-time="600" class ="time-button"> 10 min</button>
-</div>
-<div class="play-column">
-  <div class="play-button">
-    <div class="outline">
-      <img class= "play" src="./svg/play.svg">
-    </div>
-
-  </div>
-  <h3 class = "time-display">0:00</h3>
-</div>
-<div class="sound-column">
-  <audio class="song" loop>
-    <source src="./sounds/rain.mp3">
-    <source src="./sounds/beach.mp3">
-    <source src="./sounds/fire.mp3">
-  </audio>
-  <button class ="sound-button" data-sound ="./sounds/rain.mp3" data-video="./video/rain.mp4">
-    <img class="sound-img" src="./svg/rain.svg" alt="rain"/>
-  </button>
-  <button  class ="sound-button beach" data-sound ="./sounds/beach.mp3" data-video="./video/beach.mp4">
-    <img class="sound-img" src="./svg/beach.svg" alt="beach"/>
-  </button>
-  <button  class ="sound-button" data-sound ="./sounds/fire.mp3" data-video="./video/fire.mp4">
-    <img class="sound-img" src="./svg/fire.svg" alt="fire"/>
-  </button>
-</div>
-
-  </div>
- <script src="./app.js"></script>
- <script src="./text.js"></script>
-</body>
+    <script src="./app.js"></script>
+    <script src="./text.js"></script>
+  </body>
 </html>
