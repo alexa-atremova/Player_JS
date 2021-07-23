@@ -67,6 +67,14 @@ video {
   transition: all 2s ease;
   margin-bottom: 40px;
 }
+.time-button:hover{
+  background-color: rgba(255, 255, 255, 0.253);
+  
+}
+.time-button:focus{
+  background-color: rgba(255, 255, 255, 0.856);
+  color: black;
+}
 
 .time-display {
   position: absolute;
@@ -76,17 +84,28 @@ video {
 }
 
 .sound-button {
+  color: white;
   width: 150px;
   height: 70px;
   background: none;
-  border: 0;
+  border: 2px solid white;
   cursor: pointer;
-  margin-bottom: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 2s ease;
+  margin-bottom: 40px;
+ 
+}
+.sound-button:hover{
+  background-color: rgba(255, 255, 255, 0.247);
+  
+}
+.sound-button:focus{
+  background-color: rgba(255, 255, 255, 0.377);
+  
 }
 
-.beach {
-  transform: translateY(-20%);
-}
+
 
 .outline {
   display: flex;
@@ -101,6 +120,22 @@ video {
 
 .sound-img {
   object-fit: contain;
+  height: 50px;
+  width: 50px;
+ 
+}
+
+.playing {
+  animation: pulsing 1s linear infinite;
+}
+
+@keyframes pulsing {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 767px) {

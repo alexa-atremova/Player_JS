@@ -9,7 +9,7 @@ const app = () => {
   const timeDisplay = document.querySelector(".time-display")
   const timeSelect = document.querySelectorAll(".time-button")
   
-  
+  const outline = document.querySelector(".outline")
   
   let duration = 600;
   
@@ -43,6 +43,7 @@ const app = () => {
       song.play();
       video.play();
       document.getElementById('headline').hidden = true;
+      outline.classList.add('playing');
     
     play.src = "./svg/pause.svg";
    
@@ -51,6 +52,7 @@ const app = () => {
       song.pause();
       video.pause();
       play.src = "./svg/play.svg";
+      outline.classList.remove('playing');
     
     }
   }
